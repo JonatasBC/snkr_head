@@ -77,10 +77,12 @@ form {
 
 input[type="text"], input[type="password"] {
     width: 100%;
-    padding: 10px;
-    border: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: black;
     border-radius: 5px;
     margin-bottom: 20px;
+    align-items: center;
     text-align: center;
 }
 
