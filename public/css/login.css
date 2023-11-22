@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FF730E;
+}
+
+body {
+    background-color: #F8F4F4;
+    font-family: Arial, sans-serif;
+}
+
+.icone{
+    cursor: pointer;
+    width: 180px;
+}
+
+.menu-itens{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+
+}
+
+.menu-itens li{
+  margin-right: 40px;
+}
+
+.menu-itens a{
+    text-decoration: none;
+    color: rgb(233, 233, 240);
+    font-size: 1.2rem;
+    font-family: 'Segoe UI';
+    font-weight: bold;
+}
+
+.menu-itens a:hover{
+    font-size: 1.3rem;
+    color: white;
+    transition: 0.8s;
+    cursor: pointer;
+}
+
+.rodape{
+    background-color: rgb(160, 154, 154);
+    color:rgb(233, 233, 240);
+    padding: 10px;
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.copy{
+    background-color:rgb(160, 154, 154) ;
+    font-size: small;
+    
+}
+
+form {
+    background-color: #fff;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    align-items: center;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: black;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+input[type="submit"] {
+    background-color: #FF730E;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: large;
+    font-weight: bolder;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 0;
+    padding-bottom: 30px;
+}
+
+.container{
+    display: flex;
+    flex-direction: row; 
+    padding-top: 30px;
+ }
