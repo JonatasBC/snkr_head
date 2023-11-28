@@ -1,0 +1,20 @@
+<div class='tela'>
+  <h1>Atualizar informações de Usuário</h1>
+  <br />
+  <div class='desc back'>
+    <form action='/perfil' method='post'>
+      <label for='usuario'>Digite seu novo Nome</label><br />
+      <input type='text' name='usuario' /><br />
+      <label for='senha'>Digite sua nova Senha</label><br />
+      <input type='password' name='senha' /><br /><br />
+      <button type='submit'>Atualizar</button>
+      <br />
+    </form>
+    {{#if msg}}
+      <p>{{msg}}</p>
+    {{/if}}
+    {{#if msgB}}
+      <p>{{msgB}}</p>
+    {{/if}}
+  </div>
+</div>

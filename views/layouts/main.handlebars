@@ -1,37 +1,58 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../assets/css/style.css">
+<html lang='pt-BR'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <link rel='stylesheet' href='/css/style.css' />
+    <link rel='shortcut icon' href='./img/mini_icon.ipng' type='image/x-icon' />
     <title>Principal</title>
-</head>
-
-<body>
+  </head>
+  <body>
     {{#if log}}
-    <header>
+      <header class='menu'>
         <nav>
-            <a href="/">Home</a>
-            <a href="/">Logout</a>
-
+          <ul class='menu-itens'>
+            {{#if adm}}
+              <a href='/gerenciador'>Gerenciador</a>
+            {{/if}}
+            <a href='/'>Principal</a>
+            <a href='/produtos'>Produtos</a>
+            <a href='/logout'>Logout</a>
+          </ul>
         </nav>
-    </header>
+        <div class='icons'>
+          <a href='/carrinho'><img id='cart' src='/img/icone_carrinho.png' alt='carrinho' /></a>
+          <div class='profile'>
+            <a href='/perfil'> <img id='cart' src='/img/icone_usuario.png' alt='perfil' /></a>
+            <br />
+            <label id='user'>{{usuario}}</label>
+          </div>
+        </div>
+      </header>
     {{else}}
-    <header>
+      <header class='menu'>
+
+        <a href='/'><img class='logo' src='./img/Logo.png' alt='logo da marca da empresa' /> </a>
         <nav>
-            <a>{{nome}}</a>
+          <ul class='menu-itens'>
+            <a href='/'>Principal</a>
+            <a href='/login'>Login</a>
+            <a href='/cadastro'>Cadastro</a>
+          </ul>
         </nav>
-    </header>
+        <div class='icons'>
+          <img id='cart' src='./img/icone_usuario.png' alt='perfil' />
+        </div>
+      </header>
     {{/if}}
-    <main>
-        {{{body}}}
-    </main>
+    {{{body}}}
     <footer>
+      <div class='foot_block'>
+        <div class='foot'>Os Melhores Tênis para Ficar no Estilo</div>
+        <div class='foot'>Snrk Head Inc. &copy;</div>
+        <div class='foot'>contato@snkrhead.com.br</div>
 
+      </div>
     </footer>
-
-</body>
-
+  </body>
 </html>

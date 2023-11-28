@@ -1,0 +1,25 @@
+<script src="/js/itens_carrinho.js" defer></script>
+<link rel="stylesheet" href="/css/produtos.css">
+<div class="box">
+<ul>
+    {{#each dados}}
+    <div class="background">
+
+            <h2>{{this.nome}}</h2>
+            <div class="flex">
+                <li class="produto">
+                    <div class="img">
+                    <img width="300" class="pic" src="/img/{{this.nome}}.jpg" alt="">
+                    <br>
+                    <p>R${{this.precoUnitario}}</p>
+                    <br>
+                    <button class="adicionar-ao-carrinho" data-nome={{this.nome}} data-preco={{this.precoUnitario}} data-qtde=1 cod-prod={{this.id}}>Adicionar ao Carrinho</button>
+                    </div>
+                    </div>
+                </li>
+                <div></div>
+            </div>
+    </div>
+    {{/each}}
+</ul>
+</div>

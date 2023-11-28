@@ -1,52 +1,19 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<script src="/js/carrinho.js" defer></script>
+<div class="tela">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/style_masc_fem.css">
-    <script src="./carrinho.js" defer></script>
-    <title>Produtos</title>
-</head>
-
-<body>
-    <header class="cabecalho">
-        <img src="./assets/img/icone_64.png" alt="Logo da empresa">
-        <nav>
-            <ul class="menu-itens">
-                <li><a href="../index.html">Principal</a></li>
-                <li><a href="../login.html">Login</a></li>
-                <li><a href="contato.html">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h1>Carrinho de Compras</h1>
-        <ul id="itens-carrinho">
-
-        </ul>
-        <p>
-            &nbsp;&nbsp;&nbsp;Quantidade: <span id="qtde-total">0</span>
-            &nbsp;&nbsp;&nbsp;Total: R$ <span id="total-carrinho">0.0</span>
-        </p>
-
-
-        <br>
-        <button id="limpar-carrinho">Limpar Carrinho</button>
-
-    </main>
-    <footer>
-        <div class="rodape">
-            <p>Horário: Segunda a Sexta das 8h30 às 19h</p>
-            <p>Av. José Manoel Reis, número 555</p>
-        </div>
-        <div class="rodape">
-            <p>Sábado das 8h30 às 17h</p>
-            <p>sac@spt_e_cia.com.br</p>
-        </div>
-        <p>Spt_e_cia_LTDA. &copy;</p>
-    </footer>
-</body>
-
-</html>
+<h1>Carrinho de Compras</h1>
+<ul id="itens-carrinho">
+           
+</ul>
+<p>
+&nbsp;&nbsp;&nbsp;Quantidade: <span id="qtde-total">0</span>
+&nbsp;&nbsp;&nbsp;Total: R$ <span id="total-carrinho">0.0</span>
+</p>
+<br>
+<button id="limpar-carrinho">Limpar Carrinho</button>
+<br>
+<button id="botao-comprar">Comprar</button>
+<br>
+<p id="mensagem-compra"></p>
+</div>
+    
