@@ -1,27 +1,25 @@
-<div class="tela">
-<h2>Cadastrar Produtos</h2>
-    <div class="desc back">
-        <form action="/cadastrarProduto" method="post">
-            <label for="nome">Nome do Produto:</label><br>
-            <input type="text" name="nome" placeholder="Nome do relógio"><br>
-            <label for="cor">Cor do Produto:</label><br>
-            <input type="text" name="cor" placeholder="Preto"><br>
-            <label for="tipo">Tipo do Produto:</label><br>
-            <input type="text" name="tipo" placeholder="Luxo"><br>
-            <label for="quantidadeEstoque">Quantidade do Produto:</label><br>
-            <input type="text" name="quantidadeEstoque" placeholder="quantidade"><br>
-            <label for="precoUnitario">Preço unitário do Produto:</label><br>
-            <input type="text" name="precoUnitario" placeholder="unitário"><br>
-            <label for="descricao">Descrição do Produto:</label><br>
-            <input type="text" name="descricao" placeholder="Descrição"><br>
-            <br><br>
-            <button type="submit">Enviar</button>
-        </form>
-        {{#if msg}}
-            <p>{{msg}}</p>
-        {{/if}} 
-        {{#if msgB}}
-            <p>{{msgB}}</p>
-        {{/if}} 
-        </div>
+<div class='tela'>
+  <h2>Cadastrar Produtos</h2>
+  <div class='desc back'>
+    <form action='/cadastrarProduto' method='post'>
+      <label for='nome'>Nome do Produto:</label><br />
+      <input type='text' name='nome' placeholder='Nome do Tênis' /><br />
+      <label for='marca'>Marca do Produto:</label><br />
+      <input type='text' name='marca' placeholder='Nike' /><br />
+      <label for='tamanho'>Tamanho do Produto:</label><br />
+      <input type='text' name='tamanho' placeholder='42' /><br />
+      <label for='quantidadeEstoque'>Quantidade do Produto:</label><br />
+      <input type='text' name='quantidadeEstoque' placeholder='quantidade' /><br />
+      <label for='precoUnitario'>Preço unitário do Produto:</label><br />
+      <input type='text' name='precoUnitario' placeholder='unitário' />
+      <br /><br />
+      <button type='submit'>Enviar</button>
+    </form>
+    {{#if msg}}
+      <p>{{msg}}</p>
+    {{/if}}
+    {{#if msgB}}
+      <p>{{msgB}}</p>
+    {{/if}}
+  </div>
 </div>

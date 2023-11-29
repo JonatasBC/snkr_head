@@ -1,13 +1,18 @@
-<h1>Login</h1>
-<br />
-<div>
-  <form action='/login' method='post'>
-    <label for='email'>Digite seu Email</label><br />
-    <input type='text' name='email' /><br />
-    <label for='senha'>Digite sua Senha</label><br />
-    <input type='text' name='senha' /><br /><br />
-    <button type='submit'>Enviar</button>
-  </form>
+<div class='container'>
+  <link rel='stylesheet' href='/css/login.css' />
+  <div class='pagina-login'>
+    <form action='/login' method='post'>
+      <h1 style='font-weight: bolder;'>Fazer Login</h1>
+      <br />
+      <div class='label-1'>
+        <label for='email'>Digite seu Email</label><br />
+        <input type='text' name='email' />
+      </div>
+      <label for='senha'>Digite sua Senha</label><br />
+      <input type='text' name='senha' /><br /><br />
+      <button class='botao-login' type='submit'>Login</button>
+    </form>
+  </div>
   <br />
   <h2> </h2>
   <br /><br />

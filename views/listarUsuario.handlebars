@@ -1,26 +1,26 @@
-<div class="tela">
-<h1>Lista de Clientes com Cadastro</h1>
-<br>
-<table>
+<div class='tela'>
+  <h1>Lista de Clientes</h1>
+  <br />
+  <table>
     <thead>
-        <th>Nome</th>
-        <th>Email</th>
-        <th>Telefone</th>
-        <th>CPF</th>
-        <th>Senha</th>
-        <th>Tipo</th>
+      <th>Nome</th>
+      <th>Email</th>
+      <th>Telefone</th>
+      <th>CPF</th>
+      {{! <th>Senha</th> }}
+      <th>Tipo</th>
     </thead>
     <tbody>
-    {{#each dados}}
+      {{#each dados}}
         <tr>
-            <td>{{this.usuario}}</td>
-            <td>{{this.email}}</td>
-            <td>{{this.telefone}}</td>
-            <td>{{this.cpf}}</td>
-            <td>{{this.senha}}</td>
-            <td>{{this.tipo}}</td>
+          <td>{{this.usuario}}</td>
+          <td>{{this.email}}</td>
+          <td>{{this.telefone}}</td>
+          <td>{{this.cpf}}</td>
+          {{!-- <td>{{this.senha}}</td> --}}
+          <td>{{this.tipo}}</td>
         </tr>
-    {{/each}} 
+      {{/each}}
     </tbody>
-</table>
+  </table>
 </div>

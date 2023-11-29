@@ -4,26 +4,29 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge' />
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <link rel='stylesheet' href='/css/style.css' />
-    <link rel='shortcut icon' href='./img/mini_icon.ipng' type='image/x-icon' />
-    <title>Principal</title>
+    <link rel='shortcut icon' href='./img/mini_logo.png' type='image/x-icon' />
+    <title>Snkr Head | Main</title>
   </head>
   <body>
     {{#if log}}
       <header class='menu'>
         <nav>
           <ul class='menu-itens'>
-            {{#if adm}}
-              <a href='/gerenciador'>Gerenciador</a>
-            {{/if}}
-            <a href='/'>Principal</a>
-            <a href='/produtos'>Produtos</a>
-            <a href='/logout'>Logout</a>
+            <a href='/'><img class='logo' src='./img/Logo.png' alt='logo da marca da empresa' /> </a>
+            <div class='nav-logado'>
+              {{#if adm}}
+                <a href='/gerenciador'>Gerenciador</a>
+              {{/if}}
+              <a href='/'>Principal</a>
+              <a href='/produtos'>Produtos</a>
+              <a href='/logout'>Logout</a>
+            </div>
           </ul>
         </nav>
         <div class='icons'>
-          <a href='/carrinho'><img id='cart' src='/img/icone_carrinho.png' alt='carrinho' /></a>
+          <a href='/carrinho'><img id='cart' src='./img/icone_carrinho.png' alt='carrinho' /></a>
           <div class='profile'>
-            <a href='/perfil'> <img id='cart' src='/img/icone_usuario.png' alt='perfil' /></a>
+            <a href='/perfil'> <img id='cart' src='./img/icone_usuario.png' alt='perfil' /></a>
             <br />
             <label id='user'>{{usuario}}</label>
           </div>
@@ -33,25 +36,24 @@
       <header class='menu'>
 
         <a href='/'><img class='logo' src='./img/Logo.png' alt='logo da marca da empresa' /> </a>
-        <nav>
-          <ul class='menu-itens'>
+        <nav class='navigation'>
+          <ul class='menu-itens-logout'>
             <a href='/'>Principal</a>
             <a href='/login'>Login</a>
             <a href='/cadastro'>Cadastro</a>
           </ul>
         </nav>
-        <div class='icons'>
+        {{! <div class='icons'>
           <img id='cart' src='./img/icone_usuario.png' alt='perfil' />
-        </div>
+        </div> }}
       </header>
     {{/if}}
     {{{body}}}
     <footer>
-      <div class='foot_block'>
+      <div class='rodape'>
         <div class='foot'>Os Melhores Tênis para Ficar no Estilo</div>
         <div class='foot'>Snrk Head Inc. &copy;</div>
         <div class='foot'>contato@snkrhead.com.br</div>
-
       </div>
     </footer>
   </body>

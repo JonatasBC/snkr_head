@@ -1,93 +1,112 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .shoe_logo {
-    width: 110px;
-    padding-bottom: 30px;
+  width: 110px;
+  padding-bottom: 30px;
 }
 
 .shoe_price {
-    text-align: center;
-    padding-bottom: 30px;
-    padding-top: 30px;
-    font-size: 50px;
-    font-weight: bolder;
-    font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-align: center;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  font-size: 50px;
+  font-weight: bolder;
+  font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .shoe_name {
-    padding-bottom: 30px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 20px;
+  padding-bottom: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
 }
 
 .shoe {
-    background-color: #fff;
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    border-radius: 30px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
+  background-color: #fff;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 30px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
 }
 
 body {
-    background-color: #F8F4F4;
-    font-family: Arial, sans-serif;
+  background-color: #F8F4F4;
+  font-family: Arial, sans-serif;
 }
 
 .menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #FF730E;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FF730E;
 }
 
 .logo {
-    cursor: pointer;
-    width: 180px;
-    padding-left: 50px;
+  cursor: pointer;
+  width: 180px;
+  padding-left: 50px;
 }
 
 input[type="submit"] {
-    background-color: #FF730E;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: large;
-    font-weight: bolder;
+  background-color: #FF730E;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: large;
+  font-weight: bolder;
+}
+
+.navigation {
+  align-items: center;
+  padding-right: 50px;
 }
 
 .menu-itens {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    list-style: none;
-
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
 }
 
-.menu-itens li {
-    padding-right: 40px;
+.menu-itens-logout {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
 }
+
+.menu-itens li {}
 
 .menu-itens a {
-    text-decoration: none;
-    color: rgb(233, 233, 240);
-    font-size: 1.2rem;
-    font-family: 'Segoe UI';
-    font-weight: bold;
+  text-decoration: none;
+  color: rgb(233, 233, 240);
+  font-size: 1.2rem;
+  font-family: 'Segoe UI';
+  font-weight: bold;
+  padding-left: 35px;
+}
+
+.menu-itens-logout a {
+  text-decoration: none;
+  color: rgb(233, 233, 240);
+  font-size: 1.2rem;
+  font-family: 'Segoe UI';
+  font-weight: bold;
+  padding-left: 35px;
 }
 
 .menu-itens a:hover {
-    font-size: 1.3rem;
-    color: white;
-    transition: 0.8s;
-    cursor: pointer;
+  font-size: 1.3rem;
+  color: white;
+  transition: 0.3s;
+  cursor: pointer;
 }
 
 /* .rodape {
@@ -101,14 +120,75 @@ input[type="submit"] {
 } */
 
 .sapato {
-    max-width: 350px;
-    max-height: 350px;
-    padding-bottom: 30px;
+  max-width: 350px;
+  max-height: 350px;
+  padding-bottom: 30px;
 }
 
-.container{
-    display: flex;
-    flex-direction: row; 
-    padding-top: 30px;
-    padding-bottom: 30px;
- }
+.container {
+  display: flex;
+  flex-direction: row;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  transform: scale(.6);
+}
+
+.icons a {
+  width: 100px;
+  margin-left: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#user {
+  position: absolute;
+  font-size: 30px;
+  left: 270px;
+  bottom: -25px;
+  color: #DCE0D9;
+}
+
+.profile {
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.adicionar-ao-carrinho {
+  background-color: #FF730E;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: large;
+  font-weight: bolder;
+}
+
+footer {
+  padding-top: 50px;
+}
+
+.nav-logado {
+  padding-top: 43px;
+  padding-left: 20px;
+  text-align: center;
+}
+
+.rodape {
+  background-color: #FF730E;
+  color: #fff;
+  padding-left: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}

@@ -1,73 +1,71 @@
-<div class="tela">
-<div class="">
-<h2>Consultar Produto</h2>
-<div class="desc back">
-<form action="/consultaProduto" method="post">
-    <label for="nome">Nome do Produto:</label><br>
-    <input type="text" name="nome" placeholder="Nome Tênis"><br>
-    <br>
-    <button type="submit">Enviar</button>
-</form>
-<br>
-</div>
-</div>
-<table>
+<div class='tela'>
+  <div class=''>
+    <h2>Consultar Produto</h2>
+    <div class='desc back'>
+      <form action='/consultaProduto' method='post'>
+        <label for='nome'>Nome do Produto:</label><br />
+        <input type='text' name='nome' placeholder='Nome Tênis' /><br />
+        <br />
+        <button type='submit'>Enviar</button>
+      </form>
+      <br />
+    </div>
+  </div>
+  <table>
     <thead>
-        <th>Id</th>
-        <th>Nome</th>
-        <th>Marca</th>
-        <th>Tamanho</th>
-        <th>Quantidade Estoque</th>
-        <th>Preço R$</th>
+      <th>Id</th>
+      <th>Nome</th>
+      <th>Marca</th>
+      <th>Tamanho</th>
+      <th>Quantidade Estoque</th>
+      <th>Preço R$</th>
     </thead>
     <tbody>
-   {{#each dados}}
+      {{#each dados}}
         <tr>
-            <td>{{this.id}}</td>
-            <td>{{this.nome}}</td>
-            <td>{{this.marca}}</td>
-            <td>{{this.tamanho}}</td>
-            <td>{{this.quantidadeEstoque}}</td>
-            <td>{{this.preco}}</td>
+          <td>{{this.id}}</td>
+          <td>{{this.nome}}</td>
+          <td>{{this.marca}}</td>
+          <td>{{this.tamanho}}</td>
+          <td>{{this.quantidadeEstoque}}</td>
+          <td>{{this.preco}}</td>
         </tr>
-    {{/each}}
+      {{/each}}
     </tbody>
-</table>
-<div class="tela">
-<br>
-</div>
-<div class="">
-<h2>Atualização do Produto</h2>
-<br>
-<div class="desc back">
-<form action="/editarProduto" method="post">
-    <div class="btns">
-        <div>
-            <label for="id">Id do Produto:</label><br>
-            <input type="text" name="id" placeholder="Id"><br>
-            <label for="nome">Nome do Produto:</label><br>
-            <input type="text" name="nome" placeholder="Nome do Tênis"><br>
-            <label for="tamaho">Tamanho do Produto:</label><br>
-            <input type="text" name="tamaho" placeholder="42"><br>
+  </table>
+  <div class='tela'>
+    <br />
+  </div>
+  <div class=''>
+    <h2>Atualização do Produto</h2>
+    <br />
+    <div class='desc back'>
+      <form action='/editarProduto' method='post'>
+        <div class='btns'>
+          <div>
+            <label for='id'>Id do Produto:</label><br />
+            <input type='text' name='id' placeholder='Id' /><br />
+            <label for='nome'>Nome do Produto:</label><br />
+            <input type='text' name='nome' placeholder='Nome do Tênis' /><br />
+            <label for='tamaho'>Tamanho do Produto:</label><br />
+            <input type='text' name='tamaho' placeholder='42' /><br />
+          </div>
+          <div>
+            <label for='quantidadeEstoque'>Quantidade do Produto:</label><br />
+            <input type='text' name='quantidadeEstoque' placeholder='Quantidade' /><br />
+            <label for='preco'>Preço do Produto:</label><br />
+            <input type='text' name='preco' placeholder='Unitário' /><br />
+            <br />
+            <button type='submit'>Enviar</button>
+          </div>
         </div>
-        <div>
-            <label for="quantidadeEstoque">Quantidade do Produto:</label><br>
-            <input type="text" name="quantidadeEstoque" placeholder="Quantidade"><br>
-            <label for="preco">Preço do Produto:</label><br>
-            <input type="text" name="preco" placeholder="Unitário"><br>
-            <label for="descricao">Descrição do Produto:</label><br>
-            <input type="text" name="descricao" placeholder="Descrição"><br>
-            <br>
-            <button type="submit">Enviar</button>
-        </div>
+      </form>
+      {{#if msg}}
+        <p>{{msg}}</p>
+      {{/if}}
+      {{#if msgB}}
+        <p>{{msgB}}</p>
+      {{/if}}
     </div>
-</form>
-{{#if msg}}
-    <p>{{msg}}</p>
-{{/if}} 
-{{#if msgB}}
-    <p>{{msgB}}</p>
-{{/if}} 
-</div>
-</div>
+  </div>
 </div>
