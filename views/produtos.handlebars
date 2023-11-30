@@ -12,9 +12,33 @@
 </html>
 
 <body>
+<div class='container'>
+  {{#each dados}}
 
-  <div class='container'>
-    <div class='shoe'>
+    {{!-- <tr>
+        <td>{{this.nome}}</td>
+        <td>{{this.marca}}</td>
+        <td>{{this.tamanho}}</td>
+        <td>{{this.quantidadeEstoque}}</td>
+        <td>{{sthis.preco}}</td>
+      </tr> --}}
+      <div class='shoe'>
+        <img href='index.html' class='sapato' src='{{this.foto}}' alt='Air Jordan 4' />
+        <br />
+        <span class='shoe_name'>{{this.nome}}<br />"{{this.modelo}}"</span>
+        <div class='shoe_price'>R$ {{this.preco}},00</div>
+        <br />
+        <img class='shoe_logo' src='./img/logo-tênis/{{this.logoMarca}}' alt='' />
+        <br />
+        <button class='adicionar-ao-carrinho' data-nome='{{this.nome}}' data-preco='{{this.preco}}' data-qtde='1' cod-prod='{{this.id}}'>Adicionar ao Carrinho</button>
+      </div>
+      {{#if this.novaPagina}}
+        </div>
+        <div class='container'>
+      {{/if}}
+  {{/each}}
+  </div>
+  {{! <div class='shoe'>
       <img href='index.html' class='sapato' src='./img/aj4_tour_yellow.png' alt='Air Jordan 4' />
       <br />
       <span class='shoe_name'>Air Jordan 4 Retro<br />"Tour Yellow"</span>
@@ -39,7 +63,7 @@
     <div class='shoe'>
       <img href='index.html' class='sapato' src='./img/adidas_forum_bad_bunny.png' alt='Forum Bad Bunny' />
       <br />
-      <span class='shoe_name'>Adidas Forum X Bad Bunny<br />"We The Best - Crimson Bliss"</span>
+      <span class='shoe_name'>Adidas Forum X Bad Bunny<br />"Back To School"</span>
       <div class='shoe_price'>R$ 1.200,00</div>
       <br />
       <img class='shoe_logo' src='./img/logo-tênis/Adidas_Logo.png' alt='' />
@@ -80,8 +104,8 @@
       <img class='shoe_logo' src='./img/logo-tênis/Adidas_Logo.png' alt='' />
       <br />
       <button class='adicionar-ao-carrinho' data-nome='Air Jordan 5 Low' data-preco='1454' data-qtde='1' cod-prod='6'>Adicionar ao Carrinho</button>
-    </div>
-  </div>
+    </div> }}
+  {{! </div> }}
 </body>
 
 {{!-- 

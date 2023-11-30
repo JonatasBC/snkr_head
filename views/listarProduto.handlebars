@@ -1,22 +1,23 @@
+<link rel='stylesheet' href='/css/lista.css' />
 <h1>Lista dos Produtos Cadastrados</h1>
-<br>
+<br />
 <table>
-    <thead>
-        <th>Nome</th>
-        <th>Marca</th>
-        <th>Tamanho</th>
-        <th>Qtde Estoque</th>
-        <th>Preço R$</th>
-    </thead>
-    <tbody>
+  <thead>
+    <th>Nome</th>
+    <th>Marca</th>
+    <th>Tamanho</th>
+    <th>Qtde Estoque</th>
+    <th>Preço R$</th>
+  </thead>
+  <tbody>
     {{#each valores}}
-        <tr>
-            <td>{{this.nome}}</td>
-            <td>{{this.marca}}</td>
-            <td>{{this.tamanho}}</td>
-            <td>{{this.quantidadeEstoque}}</td>
-            <td>{{this.preco}}</td>
-        </tr>
-    {{/each}} 
-    </tbody>
+      <tr>
+        <td>{{this.nome}}</td>
+        <td>{{this.marca}}</td>
+        <td>{{this.tamanho}}</td>
+        <td>{{this.quantidadeEstoque}}</td>
+        <td>{{this.preco}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
 </table>

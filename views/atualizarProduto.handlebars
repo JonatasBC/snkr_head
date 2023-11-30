@@ -1,6 +1,6 @@
 <h2>Atualizar Produto</h2>
 <br />
-<form action='/atualizarProduto' method='post'>
+<form action='/editarProduto' method='post'>
   <label for='id'>Id do Produto:</label><br />
   <input type='text' name='id' placeholder='Id' /><br />
   <label for='nome'>Nome do Produto:</label><br />
@@ -8,11 +8,11 @@
   <label for='marca'>Marca do Produto:</label><br />
   <input type='text' name='marca' placeholder='Marca' /><br />
   <label for='tamanho'>Tamanho do Produto:</label><br />
-  <input type='text' name='tamanho' placeholder='Tamanho' /><br />
+  <input type='number' name='tamanho' placeholder='Tamanho' /><br />
   <label for='quantidadeEstoque'>Quantidade do Produto:</label><br />
-  <input type='text' name='quantidade' placeholder='0' /><br />
+  <input type='number' name='quantidade' placeholder='Quantidade' /><br />
   <label for='preco'>Preço do Produto:</label><br />
-  <input type='text' name='preco' placeholder='Preco' /><br />
+  <input type='mumber' name='preco' placeholder='Preco' /><br />
   <br />
   <button id='botao-editar' type='submit'>Enviar</button>
 </form>

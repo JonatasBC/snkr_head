@@ -7,6 +7,9 @@ const Produto = db.define(
     nome: {
       type: DataTypes.STRING(75),
     },
+    modelo: {
+      type: DataTypes.STRING(75),
+    },
     marca: {
       type: DataTypes.STRING(50),
     },
@@ -18,6 +21,9 @@ const Produto = db.define(
     },
     preco: {
       type: DataTypes.FLOAT,
+    },
+    foto: {
+      type: DataTypes.TEXT,
     },
   },
   {

@@ -112,6 +112,22 @@ app.get('/carrinho', (req, res) => {
 
 app.get('/produtos', async (req, res) => {
   const dados = await Produto.findAll({ raw: true });
+  for (let x = 0; x < dados.length; x++) {
+    if (dados[x].marca === 'Jordan') {
+      dados[x].logoMarca = 'Air-Jordan-Logo.png';
+    }
+    if (dados[x].marca === 'Puma') {
+      dados[x].logoMarca = 'Puma_Logo.png';
+    }
+    if (dados[x].marca === 'Adidas') {
+      dados[x].logoMarca = 'Adidas_Logo.png';
+    }
+    if (dados[x].marca === 'Yeezy') {
+      dados[x].logoMarca = 'Yeezy_Logo.png';
+    }
+    dados[x].novaPagina = (x + 1) % 3 == 0;
+  }
+  console.log(dados);
   res.render('produtos', { log, usuario, adm, dados });
 });
 
@@ -144,20 +160,20 @@ app.get('/apagarProduto', (req, res) => {
 app.post('/editarProduto', async (req, res) => {
   const id = req.body.id;
   const nome = req.body.nome;
-  const cor = req.body.cor;
-  const tipo = req.body.tipo;
+  const modelo = req.body.modelo;
+  const marca = req.body.marca;
+  const tamanho = req.body.tamanho;
   const quantidadeEstoque = Number(req.body.quantidadeEstoque);
-  const precoUnitario = Number(req.body.precoUnitario);
-  const descricao = req.body.descricao;
-  console.log(id, nome, cor, tipo, quantidadeEstoque, precoUnitario, descricao);
+  const preco = Number(req.body.preco);
+  console.log(id, nome, marca, tamanho, quantidadeEstoque, preco);
   const pesq = await Produto.findOne({ raw: true, where: { id: id } });
   const dados = {
     nome: nome,
-    cor: cor,
-    tipo: tipo,
+    modelo: modelo,
+    marca: marca,
+    tamanho: tamanho,
     quantidadeEstoque: quantidadeEstoque,
-    precoUnitario: precoUnitario,
-    descricao: descricao,
+    preco: preco,
   };
   const msg = 'Dados Alterados';
   const msgB = 'Erro';
@@ -196,15 +212,15 @@ app.get('/listarProduto', async (req, res) => {
 
 app.post('/cadastrarProduto', async (req, res) => {
   const nome = req.body.nome;
-  const cor = req.body.cor;
-  const tipo = req.body.tipo;
+  const modelo = req.body.modelo;
+  const marca = req.body.marca;
+  const tamanho = req.body.tamanho;
   const quantidadeEstoque = req.body.quantidadeEstoque;
-  const precoUnitario = req.body.precoUnitario;
-  const descricao = req.body.descricao;
-  console.log(nome, cor, tipo, quantidadeEstoque, precoUnitario, descricao);
+  const preco = req.body.preco;
+  console.log(nome, marca, tamanho, quantidadeEstoque, preco);
   let msg = 'Dados Cadastrados';
-  if (quantidadeEstoque != '' && precoUnitario != '') {
-    await Produto.create({ nome: nome, cor: cor, tipo: tipo, quantidadeEstoque: quantidadeEstoque, precoUnitario: precoUnitario, descricao: descricao });
+  if (quantidadeEstoque != '' && preco != '') {
+    await Produto.create({ nome: nome, modelo: modelo, marca: marca, tamanho: tamanho, quantidadeEstoque: quantidadeEstoque, preco: preco });
     res.render('cadastrarProduto', { log, usuario, adm, msg });
   } else {
     res.render('cadastrarProduto', { log, usuario, adm, msgB });

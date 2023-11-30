@@ -1,0 +1,36 @@
+.tela {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  text-align: center;
+}
+
+table {
+  flex: auto;
+}
+
+th {
+  padding-right: 50px;
+}
+
+td {
+  padding-right: 50px;
+}
+
+button {
+  background-color: #FF730E;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: large;
+  font-weight: bolder;
+}
+
+input {
+  border: black solid;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
