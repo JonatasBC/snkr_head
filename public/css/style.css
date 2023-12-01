@@ -137,7 +137,7 @@ input[type="submit"] {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  transform: scale(.6);
+  transform: scale(.5);
 }
 
 .icons a {

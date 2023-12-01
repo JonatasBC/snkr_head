@@ -6,16 +6,6 @@
 }
 
 button {
-  color: #fff;
-  border: black solid;
-  border-radius: 5px;
-  padding: 5px 10px;
-  cursor: pointer;
-  font-size: large;
-  font-weight: bolder;
-}
-
-.atualizar {
   background-color: #FF730E;
   color: #fff;
   border-radius: 5px;
@@ -23,11 +13,5 @@ button {
   cursor: pointer;
   font-size: large;
   font-weight: bolder;
-}
-
-input {
   border: black solid;
-  border-radius: 5px;
-  padding: 5px 10px;
-  cursor: pointer;
 }
